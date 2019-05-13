@@ -3,5 +3,13 @@ status: true
 dependencies: {  }
 name: default
 label: Default
-effects: {  }
+effects:
+  0d7db5b1-3edc-4d78-b0e2-95d91949205c:
+    uuid: 0d7db5b1-3edc-4d78-b0e2-95d91949205c
+    id: image_scale
+    weight: 1
+    data:
+      width: 1920
+      height: null
+      upscale: false
 pipeline: ''

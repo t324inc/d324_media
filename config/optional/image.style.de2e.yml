@@ -9,7 +9,7 @@ effects:
     id: image_scale
     weight: 1
     data:
-      width: 1600
+      width: 1920
       height: null
       upscale: false
 pipeline: ''
