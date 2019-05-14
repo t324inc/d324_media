@@ -8,7 +8,7 @@ package: D324
 dependencies:
   - d324_media:d324_media
   - media_entity_twitter:media_entity_twitter
-  - d324_media:entity_browser_generic_embed
+  - entity_browser_generic_embed:entity_browser_generic_embed
 
 # Information added by Drupal.org packaging script on 2019-05-08
 version: '8.x-6.11'
