@@ -20,10 +20,14 @@
     "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-      },
+    },
     "assets": {
       "type": "composer",
       "url": "https://asset-packagist.org"
+    },
+    "composer-patches": {
+      "type": "vcs",
+      "url": "https://github.com/vardot/composer-patches"
     }
   },
   "require": {
@@ -55,7 +59,7 @@
     "drupal/slick": "~2.0",
     "drupal/slick_views": "~2.0",
     "drupal/slick_media": "~2.0",
-    "vardot/entity_browser_generic_embed": "6.x-dev"
+    "vardot/entity_browser_generic_embed": "8.1.x-dev"
   },
   "extra": {
     "branch-alias": {
