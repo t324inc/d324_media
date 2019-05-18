@@ -1,7 +1,7 @@
 {
   "name": "t324inc/d324_media",
   "description": "Manages type of media contents and entity browsers in the site.",
-  "type": "d324-drupal-module",
+  "type": "drupal-module",
   "homepage": "https://github.com/t324inc/d324_media",
   "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
