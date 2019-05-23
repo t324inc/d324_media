@@ -98,6 +98,10 @@
         "https://www.drupal.org/files/issues/entity-browser-view-context-2865928-14.patch",
         "Issue #2877751: Inform users how many items they can add to a field that uses an entity browser.":
         "https://www.drupal.org/files/issues/2877751-27-8.x-2.x.patch"
+      },
+      "drupal/blazy": {
+        "Issue #3054230: Images added via RTE with caption enabled not displayed":
+        "https://www.drupal.org/files/issues/2019-05-12/3054230-4-caption-compatibility.patch"
       }
     }
   }
