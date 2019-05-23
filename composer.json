@@ -78,7 +78,8 @@
       "libraries": [
           {"name": "dropzone","package": "npm-asset/dropzone"},
           {"name": "blazy", "package": "npm-asset/blazy"},
-          {"name": "slick", "package": "npm-asset/slick-carousel"}
+          {"name": "slick", "package": "npm-asset/slick-carousel"},
+          {"name": "colorbox", "package": "bower-asset/colorbox"}
       ]
     },
     "enable-patching": true,
