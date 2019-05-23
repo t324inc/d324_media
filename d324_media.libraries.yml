@@ -9,6 +9,7 @@ common:
     - core/drupalSettings
     - core/jquery
     - core/jquery.once
+    - blazy/blazy
 common_logged:
   version: VERSION
   css:
