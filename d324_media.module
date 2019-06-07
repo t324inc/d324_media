@@ -70,7 +70,9 @@ function d324_media_preprocess_field(&$variables) {
           'hash' => $iframe_url_helper->getHash($value, $max_width, $max_height, $provider, $view_mode),
         ],
       ]);
-
+      if($entity->hasField('name')) {
+        $variables['items'][0]['content']['#attributes']['title'] = $entity->get('name')->getString();
+      }
       $variables['items'][0]['content']['#attributes']['src'] = $url->toString();
     }
   }
