@@ -51,7 +51,6 @@
     "drupal/crop": "~2.0",
     "drupal/focal_point": "1.0",
     "drupal/imageapi_optimize": "~2.0",
-    "drupal/fitvids": "^1.0",
     "drupal/blazy": "~2.0",
     "drupal/slick_media": "~2.0",
     "vardot/entity_browser_generic_embed": "8.1.x-dev",
