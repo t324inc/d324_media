@@ -26,7 +26,7 @@ ready(function() {
   var media_iframe = document.querySelector('iframe');
   media_iframe.setAttribute('id', 'media-oembed-iframe');
 
-  var player_confgured = false;
+  var player_configured = false;
   var youtube_player;
 
   function actionProcessor(evt) {
@@ -36,7 +36,7 @@ ready(function() {
       var youtube_iframe = document.querySelector('iframe[src*="youtube.com"]');
       if (youtube_iframe !== undefined && youtube_iframe.src !== undefined) {
 
-        if (!player_confgured) {
+        if (!player_configured) {
           var youtubeURL = String(youtube_iframe.src);
           youtubeURL = youtubeURL.replace(/autoplay=0/gi, "autoplay=1");
           youtubeURL = youtubeURL.replace(/controls=0/gi, "controls=1");
