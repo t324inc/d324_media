@@ -525,3 +525,40 @@ function d324_media_preprocess_media_oembed_iframe__remote_video(&$variables) {
   $variables['base_path'] = base_path();
   $variables['d324_media_path'] = \Drupal::service('module_handler')->getModule('d324_media')->getPath();
 }
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function d324_media_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+
+  $plugin_id = $context['widget']->getPluginId();
+  if ($plugin_id == 'media_library_widget') {
+      if (isset($context['items'])) {
+        // Gets the first referenced entity.
+        // Doesn't matter which one, we just need the media edit template.
+        if ($media = $context['items']->entity) {
+          if ($edit_template = $media->getEntityType()->getLinkTemplate('edit-form')) {
+            foreach (\Drupal\Core\Render\Element::children($element['selection']) as $key) {
+              $edit_url = Url::fromUserInput(str_replace('{media}', $element['selection'][$key]['target_id']['#value'], $edit_template));
+              $element['selection'][$key]['media_edit'] = [
+                '#type' => 'link',
+                '#title' => t('Edit media item'),
+                '#url' => $edit_url,
+                '#attributes' => [
+                  'class' => ['button'],
+                ],
+                '#theme_wrappers' => [
+                  'container' => [
+                    '#attributes' => [
+                      'class' => ['action-links', 'media-library-edit__action-links'],
+                    ],
+                  ],
+                ],
+              ];
+            }
+          }
+        }
+      }
+
+  }
+}
