@@ -24,6 +24,6 @@
     <script src="{{ base_path }}{{ d324_media_path }}/js/oembed-frame.d324-media.{{ provider }}.js"></script>
   </head>
   <body style="margin: 0">
-    {{ media|raw }}
+    {{ media|replace({'src=': 'data-src='})|raw }}
   </body>
 </html>

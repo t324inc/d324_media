@@ -26,6 +26,11 @@ ready(function() {
   var media_iframe = document.querySelector('iframe');
   media_iframe.setAttribute('id', 'media-oembed-iframe');
 
+  if(media_iframe.getAttribute('data-src')) {
+    media_iframe.setAttribute('src', media_iframe.getAttribute('data-src'));
+    media_iframe.removeAttribute('data-src');
+  }
+
   var player_confgured = false;
   var vimeo_player;
 
