@@ -3,7 +3,7 @@
  *
  * @todo Move into the Seven theme when this module is marked as stable.
  * @see https://www.drupal.org/project/drupal/issues/2980769
- * 
+ *
  * They have changed this in Drupal 8.7.0 with other style.
  */
 
@@ -18,11 +18,15 @@
 .media-library-item {
   justify-content: center;
   vertical-align: top;
-  border: 1px solid #dbdbdb;
-  margin: 16px 16px 2px 2px;
-  width: 180px;
+  border: none;
+  padding: 0 .5rem .5rem 0;
+  margin: 0;
   background: #fff;
   transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.media-library-item .form-wrapper {
+  position: relative;
 }
 
 .media-library-view {
@@ -45,12 +49,6 @@
   text-align: center;
 }
 
-.media-library-item .field--name-thumbnail img {
-  height: 180px;
-  object-fit: contain;
-  object-position: center center;
-}
-
 .media-library-item.is-hover,
 .media-library-item.checked,
 .media-library-item.is-focus {
@@ -67,6 +65,8 @@
 .media-library-item .js-click-to-select-checkbox input {
   width: 30px;
   height: 30px;
+  margin: 0;
+  right: 10px;
 }
 
 .media-library-item .js-click-to-select-checkbox .form-item {
@@ -74,7 +74,7 @@
 }
 
 .media-library-item__preview {
-  padding-bottom: 34px;
+  padding-bottom: 24px;
 }
 
 .media-library-item__status {
@@ -101,10 +101,11 @@
   bottom: 0;
   display: block;
   padding: 5px;
-  max-width: calc(100% - 10px);
-  max-height: calc(100% - 50px);
+  max-width: 100%;
+  width: 100%;
   overflow: hidden;
-  background: white;
+  background: #eee;
+  line-height: 1;
 }
 
 .media-library-item__name {
@@ -150,7 +151,11 @@
 }
 
 .media-library-selection {
-  margin-bottom: 1.5rem;
+  margin: 0;
+}
+
+.js-media-library-widget-toggle-weight {
+  display: none !important;
 }
 
 .media-library-widget {
@@ -177,8 +182,8 @@
 .media-library-item .media-library-item__remove.button:focus {
   position: absolute;
   z-index: 1;
-  top: 10px;
-  right: 10px;
+  top: 0px;
+  right: 0px;
   width: 24px;
   height: 24px;
   margin: 5px;
@@ -266,4 +271,124 @@
 
 .media-library-item .action-links a {
   flex-grow: 1;
+}
+
+.media-library-menu li {
+  display: block;
+}
+
+.media-library-menu.nav {
+  display: block;
+}
+
+.media-library-wrapper .media-library-view > nav {
+  order: 4;
+}
+
+.media-library-wrapper .media-library-view > nav .pager__item {
+  padding: 0;
+}
+
+.media-library-item.is-hover, .media-library-item.checked, .media-library-item.is-focus {
+  margin: 0;
+}
+
+.media-library-item--grid.is-hover:before, .media-library-item--grid.checked:before, .media-library-item--grid.is-focus:before {
+  border: none;
+}
+
+.media-library-add-form .form-item-upload {
+  display: flex;
+}
+
+.media-library-add-form .form-item-upload label {
+  display: none;
+}
+
+.media-library-add-form .form-item-upload small {
+  display: none;
+}
+
+.media-library-item--table.media-library-item .form-item {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  z-index: 1;
+}
+
+.media-library-item--table.media-library-item .form-item input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.media-library-item .action-links {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 5px;
+  margin: 0;
+}
+
+.media-library-edit__action-links a {
+  background: #fff;
+  margin-top: 5px;
+  font-size: 12px;
+  padding: 0 4px;
+}
+
+.media-library-item--grid:before {
+  content: none;
+}
+
+.media-library-item .field--name-thumbnail img,
+.media-library-selection .media-library-item__preview img,
+.media-library-item .media-library-item__preview img {
+  height: 180px;
+  width: 100%;
+  object-fit: contain;
+  object-position: center top;
+  background: #eee;
+}
+
+.media-library-item .views-field-views-bulk-operations-bulk-form {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.media-library-item .views-field-views-bulk-operations-bulk-form .js-click-to-select-checkbox input {
+  right: 0;
+  top: 0;
+}
+
+.media-library-item .views-field-views-bulk-operations-bulk-form .js-click-to-select-checkbox {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0.5rem;
+}
+
+.media-library-views-form {
+  margin: 0;
+}
+
+.media-library-views-form.vbo-view-form {
+  margin: 0;
+}
+
+.vbo-view-form .media-library-views-form__header, .vbo-view-form .media-library-select-all, .vbo-view-form .media-library-views-form > .views-table {
+  margin: 0;
+}
+
+.vbo-view-form .media-library-item .field--name-name {
+  padding: .25rem;
+  font-size: 12px;
+  line-height: 1;
 }
