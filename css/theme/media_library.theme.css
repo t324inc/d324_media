@@ -182,8 +182,6 @@
 .media-library-item .media-library-item__remove.button:focus {
   position: absolute;
   z-index: 1;
-  top: 0px;
-  right: 0px;
   width: 24px;
   height: 24px;
   margin: 5px;
